@@ -1,0 +1,5 @@
+C:\Users\Guangyao\IdeaProjects\percolation\exercise\src>
+
+javac -cp C:\Users\Guangyao\IdeaProjects\percolation\exercise\lib\stdlib.jar;C:\Users\Guangyao\IdeaProjects\percolation\exercise\lib\algs4.jar; PercolationVisualizer.java
+
+java -cp C:\Users\Guangyao\IdeaProjects\percolation\exercise\lib\stdlib.jar;C:\Users\Guangyao\IdeaProjects\percolation\exercise\lib\algs4.jar; PercolationVisualizer input20.txt
