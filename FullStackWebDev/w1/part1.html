@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dating Website</title>
+
+
+</head>
+<body>
+
+	<h1>Please Enter Your Details For Our Dating Website</h1>
+
+	<form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="post" enctype="multipart/form-data">
+		<fieldset>
+			<legend>Your Face</legend>
+			<label for="fileLoad">Your image:</label>
+			<input type="file" name="fileLoad" required> <br>
+			<label for="">Image preview:</label>
+			<img src="" alt="" id="preview"> <br>
+		</fieldset>
+	</form>
+
+	<form action="https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="get">
+		<fieldset>
+			<legend>Your General Details</legend>
+			<label for="name">Name:</label>
+			<input type="text" name="name" required placeholder="your full name" >
+			<br>
+			<label for="gender">Gender:</label>
+			<input type="radio" name="gender" class="Wauto" value="male" required>Male
+			<input type="radio" name="gender" class="Wauto" value="female" required>Female
+			<br>
+			<label for="age">Age:</label>
+			<input type="number" name="age" required>
+			<br>
+			<label for="birthday">Date of birth:</label>
+			<input type="date" name="birthday">
+			<br>
+			<label for="color">Favorite color:</label>
+			<input type="color" name="color">
+			<br>
+			<label for="country">Which Counrey:</label>
+			<select name="country" id="">
+				<option value="hk">HK</option>
+				<option value="vc">C</option>
+				<option value="sf">SF</option>
+				<option value="cn">CN</option>
+				<option value="us">US</option>
+				<option value="uk">UK</option>
+			</select>
+			<br>
+		</fieldset>
+		<fieldset>
+			<legend>Your Indicators</legend>
+			<label for="h">Height: </label>
+			<span class="s1">Short</span><input name="h" type="range" min="0" max="100"><span class="s2">Tall</span>
+			<br>
+			<label for="s">Salary:</label>
+			<span class="s1">Poor</span><input name="s" type="range" min="0" max="100"><span class="s2">Rich</span>
+		</fieldset>
+		<fieldset>
+			<legend>Your Contact Information</legend>
+			<label for="email">Email:</label>
+			<input type="email" name="email" required>
+			<br>
+			<label for="mb">Mobile:</label>
+			<input type="tel" name="mb">
+			<br>
+			<label for="ad">Address:</label>
+			<textarea name="ad" id="" ></textarea>
+			<br>
+			<label for="mtcy">Method to contact you:</label>
+			<input type="checkbox" name="mtcy" class="Wauto">Email
+			<input type="checkbox" name="mtcy" class="Wauto">Whatsapp
+			<input type="checkbox" name="mtcy" class="Wauto">in-app chat
+			<b class="Wauto"r>
+		</fieldset>
+		<input type="submit" value="Submit">
+	</form>
+
+</body>
+</html>
