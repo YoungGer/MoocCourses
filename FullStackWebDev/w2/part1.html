@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<script>
+		function welcome() {
+			//定义要选择的color数组
+			var colorArray = ['blue', 'cyan', 'gold', 'gray', 'green', 'magenta', 'orange', 'red', 'white', 'yellow'];
+			//电脑随机选择目标数组
+			var rN = Math.floor(Math.random() * colorArray.length);
+			var goalColor = colorArray[rN];
+			//让开发者看到真实的目标
+			console.log(goalColor);
+			var nGuess = 0;
+
+			alert('goalColor is :  '+goalColor);
+
+			while (true)
+			{
+				var inputcolor = prompt('I am thinking of one of these colors:\n\nblue, cyan, gold, gray, green, magenta, orange, red, white, yellow\n\nWhat color am I thinking of?');
+				nGuess++;
+
+
+				//判断输入的color是不是在color数组中,如果不在输出提示
+				if (inputcolor == goalColor)
+				{
+					//更改背景颜色
+					myBody = document.getElementsByTagName("body")[0];
+					myBody.style.background = inputcolor;
+					alert("Congratulations! You have guessed the color!\n\nIt took you "+nGuess+" guesses to finish the game!\n\nYou can see teh colour in the background.");
+					break;
+				}
+			};
+
+		}
+	</script>
+
+</head>
+
+<body onload="welcome()">
+
+</body>
+</html>
