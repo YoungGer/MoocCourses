@@ -11,4 +11,8 @@ att = gss$coneduc
 table(sex,att)
 mosaicplot(table(sex,att))
 
+d = data.frame(sex=sex,att=att)
 
+d = subset(d,(!is.na(d$sex) )& (! is.na(d$att)))
+head(d,200)
+d
