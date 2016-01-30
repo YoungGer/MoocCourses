@@ -1,0 +1,66 @@
+<head>
+  <title>image_share</title>
+</head>
+
+<body>
+{{> image_add_form}}
+  <h1>Welcome to Coursera!</h1>
+	<div class="container">
+		{{> images}}
+	</div>
+</body>
+
+<!-- <template name="image_add_form">
+					<form class='js-add-image'>
+						<input type="text" name='img_src'>
+						<br>
+						<input type="text" name='img_alt'>
+						<button class='btn btn-success'>save</button>
+					</form>
+</template> -->
+
+<template name="image_add_form">
+	<div class="modal fade" id="image_add_form">
+		<div class='modal-dialog'>
+			<div class="modal-content">
+				<div class="modal-header">
+					<div class="modal-title"></div>
+				</div>
+				<div class="modal-body">
+					<form class='js-add-image'>
+						<input type="text" name='img_src'>
+						<br>
+						<input type="text" name='img_alt'>
+						<button class='btn btn-success'>save</button>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button class='btn btn-warning' data-dismiss='modal'>cancel</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+
+
+
+<template name="images">
+<button class='btn btn-success js-show-image-form'>add image</button>
+<div class="row">
+	{{#each images}}
+	<div class="col-xs-12 col-md-3" id={{_id}}>
+		<div class="thumbnail">
+			<img class="js-image thumb-image" src="{{image_src}}" alt='{{image_alt}}' width='100%' height="300">
+			<div class="caption">
+				<h3>Ratting: {{rating}}</h3>
+				<p>{{image_alt}}</p>
+
+				<p>{{>starsRating mutable=true class='js-rate-image' id=_id}}</p>
+
+				<button class='js-del-image btn btn-warning'>delete</button>
+			</div>
+		</div>
+	</div>
+	{{/each}}
+</div>
+</template>
