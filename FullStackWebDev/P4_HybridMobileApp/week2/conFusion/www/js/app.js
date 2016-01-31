@@ -79,7 +79,7 @@ angular.module('conFusion', ['ionic', 'conFusion.controllers','conFusion.service
                 controller:'FavoritesController'
             }
           }
-    })
+        })
 
   .state('app.dishdetails', {
     url: '/menu/:id',

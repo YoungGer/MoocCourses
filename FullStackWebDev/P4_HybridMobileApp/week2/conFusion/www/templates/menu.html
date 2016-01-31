@@ -1,4 +1,6 @@
-   <div class="tabs-striped tabs-color-royal">
+   
+<ion-view view-title="MENU"> 
+  <div class="tabs-striped tabs-color-royal">
     <ul class="tabs">
         <li ng-class="{active:isSelected(1)}" class="tab-item">
             <a ng-click="select(1)">The Menu</a></li>
@@ -10,10 +12,10 @@
             <a  ng-click="select(4)">Desserts</a></li>
     </ul>
   </div>
-  
+
+
   <ion-content>
     <ion-list>
-
       <ion-item ng-repeat="dish in dishes | filter:{category: filtText}" href="#/app/menu/{{dish.id}}" class="item-thumbnail-left">
         <img ng-src="{{baseURL+dish.image}}">
         <h2>{{dish.name}}
@@ -24,6 +26,6 @@
             ng-click="addFavorite({{dish.id}})">
         </ion-option-button>
       </ion-item>
-
     </ion-list>
   </ion-content>
+</ion-view>

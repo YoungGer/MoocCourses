@@ -3,7 +3,7 @@
 angular.module('conFusion.services', ['ngResource'])
         .constant("baseURL","http://localhost:3000/")
         .service('menuFactory', ['$resource', 'baseURL', function($resource,baseURL) {
-            
+    
             var promotions = [
                 {
                           _id:0,
@@ -15,11 +15,7 @@ angular.module('conFusion.services', ['ngResource'])
                 }
                 
             ];
-            
-                this.getURL = function(){
-                    return baseURL
-                }
-
+    
                 this.getDishes = function(){
                     
                     return $resource(baseURL+"dishes/:id",null,  {'update':{method:'PUT' }});
@@ -60,7 +56,7 @@ angular.module('conFusion.services', ['ngResource'])
             var favFac = {};
             var favorites = [];
 
-            favFac.addToFavorites = function (index){
+            favFac.addToFavorites = function (index) {
                 for (var i = 0; i < favorites.length; i++) {
                     if (favorites[i].id == index)
                         return;
@@ -69,18 +65,18 @@ angular.module('conFusion.services', ['ngResource'])
             };
 
             favFac.deleteFromFavorites = function (index) {
-                    for (var i = 0; i < favorites.length; i++) {
-                        if (favorites[i].id == index) {
-                            favorites.splice(i, 1);
-                        }
+                for (var i = 0; i < favorites.length; i++) {
+                    if (favorites[i].id == index) {
+                        favorites.splice(i, 1);
                     }
-                };
+                }
+            };
 
-                favFac.getFavorites = function () {
-                    return favorites;
-                };
+            favFac.getFavorites = function () {
+                return favorites;
+            };
 
             return favFac;
-        }])
+            }])
 
 ;
